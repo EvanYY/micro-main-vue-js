@@ -1,4 +1,4 @@
-# micro-mainp-vue-js
+# micro-main-vue-js
 
 ## Project setup
 ```
