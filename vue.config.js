@@ -1,6 +1,7 @@
 const path = require('path')
+const eslintSorceMap = process.env.NODE_ENV !== 'production' || process.env.NODE_ENV === 'test'
 module.exports = {
-  lintOnSave: process.env.NODE_ENV !== 'production' || process.env.VUE_APP_MODE === 'test',
+  lintOnSave: eslintSorceMap,
   configureWebpack: {
     resolve: {
       alias: {
@@ -21,8 +22,9 @@ module.exports = {
         .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin).end()
     }
   },
+  productionSourceMap: eslintSorceMap,
   devServer: {
-    port: 8080,
+    port: 9999,
     open: false,
     disableHostCheck: true
   }
