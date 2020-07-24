@@ -1,10 +1,10 @@
-let path = require('path');
+const path = require('path')
 module.exports = {
-  lintOnSave: true,
+  lintOnSave: process.env.NODE_ENV !== 'production' || process.env.VUE_APP_MODE === 'test',
   configureWebpack: {
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src'),
+        '@': path.resolve(__dirname, 'src')
       }
     }
   },
@@ -25,5 +25,5 @@ module.exports = {
     port: 8080,
     open: false,
     disableHostCheck: true
-  },
+  }
 }

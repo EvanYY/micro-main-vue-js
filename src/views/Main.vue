@@ -17,13 +17,13 @@ export default {
     return {}
   },
   methods: {},
-  created() {},
-  mounted() {
-    console.log(process.env.NODE_ENV);
-    console.log(process.env.BASE_URL);
-    console.log(process.env.VUE_APP_MODE);
+  created () {},
+  mounted () {
+    console.log(process.env.NODE_ENV)
+    console.log(process.env.BASE_URL)
+    console.log(process.env.VUE_APP_MODE)
   },
-  beforeDestroy () {},
+  beforeDestroy () {}
 }
 </script>
 
