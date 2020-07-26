@@ -1,8 +1,14 @@
 export const microApp = [
   {
-    name: 'VueMicroApp',
-    entry: '//localhost:10200',
+    name: 'ReactMicroApp',
+    entry: 'http://localhost:10100',
     container: '#frame',
-    activeRule: '/vue'
+    activeRule: '#/react'
+  },
+  {
+    name: 'VueMicroApp',
+    entry: 'http://localhost:10200',
+    container: '#frame',
+    activeRule: '#/vue'
   }
 ]

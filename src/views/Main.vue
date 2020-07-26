@@ -11,7 +11,11 @@ export default {
   components: {},
   mixins: [],
   props: {},
-  watch: {},
+  watch: {
+    '$route' (val) {
+      console.log(val)
+    }
+  },
   computed: {},
   data () {
     return {}
