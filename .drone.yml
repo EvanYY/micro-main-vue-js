@@ -1,0 +1,61 @@
+kind: pipeline
+type: docker
+name: default
+
+platform:
+os: linux
+arch: amd64
+
+steps:
+
+
+  - name: build-node
+    image: harbor.leadscloud.com:8443/library/node:13.10.1-stretch
+    environment:
+      build:
+        from_secret: build
+    settings:
+    commands:
+      - npm set registry http://10.2.2.164:8081/repository/npm-public/
+      - npm i
+      - echo $build
+      - npm run build:$build
+      - cp -r dist micro-main-vue
+    when:
+      event:
+        - push
+  - name: scp-files
+    image: appleboy/drone-scp
+    settings:
+      target:
+        from_secret: file_path
+      host:
+        from_secret: host
+      user:
+        from_secret: user
+      key:
+        from_secret: key
+      source: micro-main-vue
+    when:
+      event:
+        - push
+  - name: dingtalk
+    image: lddsb/drone-dingtalk-message
+    settings:
+      #7a5fd37aee720875479134ad1cc8faa932f972cae9cd758226dde42a46b6919c
+      token:
+        from_secret: dingding
+      type: markdown
+      message_color: true
+      message_pic: true
+      sha_link: true
+    when:
+      event:
+        - push
+
+trigger:
+status:
+  - success
+  - error
+  - failure
+  - killed
