@@ -3,7 +3,7 @@
     我是Main
     <div @click="goPath('vue')" >vue</div>
     <div @click="goPath('react')">react</div>
-    <iframe src="http://192.168.74.216:10200" frameborder="2" width="1000px" height="500px"></iframe>
+    <iframe src="https://192.168.74.216:10200" frameborder="2" width="1000px" height="500px"></iframe>
  </div>
 </template>
 
