@@ -1,6 +1,8 @@
 <template>
  <div>
     我是Main
+    <div @click="goPath('vue')" >vue</div>
+    <div @click="goPath('react')">react</div>
  </div>
 </template>
 
@@ -23,6 +25,10 @@ export default {
   methods: {
     test () {
       return false
+    },
+    goPath (path) {
+      debugger
+      this.$router.push({ path: `${path}` })
     }
   },
   created () {},

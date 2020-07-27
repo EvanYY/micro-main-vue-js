@@ -1,6 +1,6 @@
 <template>
   <div id="main-app">
-    <router-view/>
-    <section  id="frame"></section>
+    <router-view />
+    <section id="frame"></section>
   </div>
 </template>

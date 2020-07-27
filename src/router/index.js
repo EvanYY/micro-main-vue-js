@@ -7,6 +7,12 @@ const routes = [
   {
     path: '/',
     name: 'Main',
+    children: [
+      {
+        name: 'micro-vue-app1',
+        path: 'vue/*'
+      }
+    ],
     component: () => import('@/views/Main.vue')
   }
 ]

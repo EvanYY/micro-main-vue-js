@@ -15,10 +15,7 @@
     "build:gray": "vue-cli-service build --mode gray",
     "build:overseas": "vue-cli-service build --mode overseas",
     "build:test": "vue-cli-service build --mode newdev",
-    "build:prod-linux": "vue-cli-service build --mode production",
-    "build:test-linux": "vue-cli-service build --mode development",
-    "build:gray-linux": "vue-cli-service build --mode gray",
-    "b:test": "vue-cli-service build --mode test",
+    "build:tm": "vue-cli-service build --mode test",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
