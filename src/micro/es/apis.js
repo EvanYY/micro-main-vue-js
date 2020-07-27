@@ -3,6 +3,7 @@ import { mountRootParcel, registerApplication, start as startSingleSpa } from 's
 import { loadApp } from './loader'
 import { doPrefetchStrategy } from './prefetch'
 import { Deferred } from './utils'
+import { staticStart } from './qiankunStaticConfig'
 window.__POWERED_BY_QIANKUN__ = true
 var microApps = [] // eslint-disable-next-line import/no-mutable-exports
 
@@ -14,9 +15,11 @@ export function registerMicroApps (apps, lifeCycles) {
 
   var unregisteredApps = apps.filter(function (app) {
     return !microApps.some(function (registeredApp) {
+      debugger
       return registeredApp.name === app.name
     })
   })
+  debugger
   microApps = __spread(microApps, unregisteredApps)
   unregisteredApps.forEach(function (app) {
     var name = app.name
@@ -72,18 +75,12 @@ export function start (opts) {
     opts = {}
   }
 
-  frameworkConfiguration = __assign({
-    prefetch: true,
-    singular: true,
-    sandbox: true
-  }, opts)
-
+  frameworkConfiguration = __assign({}, staticStart, opts)
   var prefetch = frameworkConfiguration.prefetch
   var sandbox = frameworkConfiguration.sandbox
   var singular = frameworkConfiguration.singular
   var urlRerouteOnly = frameworkConfiguration.urlRerouteOnly
   var importEntryOpts = __rest(frameworkConfiguration, ['prefetch', 'sandbox', 'singular', 'urlRerouteOnly'])
-
   if (prefetch) {
     doPrefetchStrategy(microApps, prefetch, importEntryOpts)
   }

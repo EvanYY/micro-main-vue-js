@@ -98,6 +98,7 @@ function getAppWrapperGetter (appName, appInstanceId, useLegacyRender, strictSty
 
 var rawAppendChild = HTMLElement.prototype.appendChild
 var rawRemoveChild = HTMLElement.prototype.removeChild
+
 /**
  * Get the render function
  * If the legacy render function is provide, used as it, otherwise we will insert the app element to target container by qiankun
