@@ -31,6 +31,7 @@ export function registerMicroApps (apps, lifeCycles) {
       app: function app () {
         return __awaiter(_this, undefined, undefined, function () {
           return __generator(this, function (_a) {
+            console.log(_a)
             switch (_a.label) {
               case 0:
                 return [4,
