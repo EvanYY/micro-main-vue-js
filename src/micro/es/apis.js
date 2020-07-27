@@ -15,11 +15,9 @@ export function registerMicroApps (apps, lifeCycles) {
 
   var unregisteredApps = apps.filter(function (app) {
     return !microApps.some(function (registeredApp) {
-      debugger
       return registeredApp.name === app.name
     })
   })
-  debugger
   microApps = __spread(microApps, unregisteredApps)
   unregisteredApps.forEach(function (app) {
     var name = app.name
