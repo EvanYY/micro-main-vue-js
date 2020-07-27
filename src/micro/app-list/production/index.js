@@ -7,7 +7,7 @@ export const microApp = [
   // },
   {
     name: 'VueMicroApp',
-    entry: 'https://micro-test.leadscloud.com/micro-app1',
+    entry: 'http://192.168.74.216:10200',
     container: '#frame',
     activeRule: '#/vue'
   }
