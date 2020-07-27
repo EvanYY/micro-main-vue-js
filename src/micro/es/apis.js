@@ -72,7 +72,6 @@ export function start (opts) {
   if (opts === undefined) {
     opts = {}
   }
-
   frameworkConfiguration = __assign({}, staticStart, opts)
   var prefetch = frameworkConfiguration.prefetch
   var sandbox = frameworkConfiguration.sandbox
@@ -82,6 +81,7 @@ export function start (opts) {
   if (prefetch) {
     doPrefetchStrategy(microApps, prefetch, importEntryOpts)
   }
+  console.log('%c start', frameworkConfiguration, 'color:red')
 
   if (sandbox) {
     if (!window.Proxy) {
