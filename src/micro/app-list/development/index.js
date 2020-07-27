@@ -7,7 +7,7 @@ export const microApp = [
   // },
   {
     name: 'VueMicroApp',
-    entry: '//192.168.74.216:10200',
+    entry: 'http://192.168.74.216:10200',
     container: '#frame',
     activeRule: '#/vue'
   }
