@@ -19,6 +19,7 @@ export function registerMicroApps (apps, lifeCycles) {
     })
   })
   microApps = __spread(microApps, unregisteredApps)
+  console.log('microApps', microApps)
   unregisteredApps.forEach(function (app) {
     var name = app.name
     var activeRule = app.activeRule
