@@ -26,7 +26,7 @@ module.exports = {
         .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin).end()
     }
   },
-  productionSourceMap: eslintSorceMap,
+  productionSourceMap: !eslintSorceMap,
   // productionSourceMap: true,
   devServer: {
     port: 9999,
