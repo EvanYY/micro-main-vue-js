@@ -12,6 +12,14 @@
 import _isFunction from 'lodash/isFunction'
 export default {
   name: 'Main',
+  beforeRouteEnter (to, from, next) {
+    console.log('main to', to)
+    console.log('main from', from)
+    console.log('main next', next)
+    next(vm => {
+      return true
+    })
+  },
   components: {},
   mixins: [],
   props: {},
@@ -43,7 +51,3 @@ export default {
   beforeDestroy () {}
 }
 </script>
-
-<style scoped lang='scss'>
-
-</style>

@@ -38,7 +38,7 @@ addGlobalUncaughtErrorHandler((event) => {
   // 加载失败时提示
   if (msg && msg.includes('died in status LOADING_SOURCE_CODE')) {
     // eslint-disable-next-line no-alert
-    window.alert('子应用加载失败，请检查应用是否可运行')
+    throw Error('子应用加载失败，请检查应用是否可运行')
   }
 })
 
