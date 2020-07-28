@@ -9,9 +9,6 @@ module.exports = {
         '@': path.resolve(__dirname, 'src')
       }
     }
-    // output: {
-    //   publicPath: process.env.NODE_ENV === 'production' ? '/micro-main-vue/' : '/'
-    // }
   },
   chainWebpack: config => {
     config
@@ -26,8 +23,8 @@ module.exports = {
         .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin).end()
     }
   },
-  productionSourceMap: !eslintSorceMap,
-  // productionSourceMap: true,
+  // productionSourceMap: eslintSorceMap,
+  productionSourceMap: false,
   devServer: {
     port: 9999,
     open: false,
