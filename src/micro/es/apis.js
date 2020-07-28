@@ -25,13 +25,15 @@ export function registerMicroApps (apps, lifeCycles) {
     var activeRule = app.activeRule
     var props = app.props
     var appConfig = __rest(app, ['name', 'activeRule', 'props'])
+    console.log('appConfig', appConfig)
     localStorage.setItem('information', 'i am your father')
     registerApplication({
       name: name,
       app: function app () {
         return __awaiter(_this, undefined, undefined, function () {
           return __generator(this, function (_a) {
-            console.log(_a)
+            console.log('_a', _a)
+            console.log('frameworkStartedDefer', frameworkStartedDefer)
             switch (_a.label) {
               case 0:
                 return [4,

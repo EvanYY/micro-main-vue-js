@@ -3,7 +3,6 @@ import App from './App.vue'
 import startQiankun from './micro'
 import router from './router'
 import store from './store'
-console.log(startQiankun)
 Vue.config.productionTip = false
 startQiankun()
 new Vue({

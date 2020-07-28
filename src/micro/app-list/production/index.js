@@ -9,6 +9,9 @@ export const microApp = [
     name: 'VueMicroApp',
     entry: 'https://micro-test.leadscloud.com/micro-app1',
     container: '#frame',
-    activeRule: '#/vue'
+    activeRule: '#/vue',
+    props: {
+      say: 'i am your father'
+    }
   }
 ]
