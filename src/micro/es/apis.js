@@ -83,7 +83,8 @@ export function start (opts) {
   if (prefetch) {
     doPrefetchStrategy(microApps, prefetch, importEntryOpts)
   }
-  console.log('%c start', frameworkConfiguration, 'color:red')
+  console.log('frameworkConfiguration', frameworkConfiguration)
+  console.log('staticStart', staticStart)
 
   if (sandbox) {
     if (!window.Proxy) {
