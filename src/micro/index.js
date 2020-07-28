@@ -8,7 +8,6 @@ import {
 } from './es'
 import { microApp } from './app'
 const apps = microApp
-console.log('apps', apps)
 /**
  * 注册子应用
  * 第一个参数 - 子应用的注册信息

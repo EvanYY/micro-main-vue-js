@@ -1,6 +1,5 @@
 import { __awaiter, __generator } from 'tslib'
 var rawPublicPath = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__ || '/'
-console.log('rawPublicPath', rawPublicPath)
 export default function getAddOn (global, publicPath) {
   if (publicPath === undefined) {
     publicPath = '/'

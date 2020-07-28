@@ -7,6 +7,12 @@ const routes = [
   {
     path: '/',
     name: 'Main',
+    children: [
+      {
+        path: 'vue',
+        name: 'Vue'
+      }
+    ],
     component: () => import('@/views/Main.vue')
   }
 ]

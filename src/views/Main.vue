@@ -3,6 +3,7 @@
     我是Main
     <div @click="goPath('vue')" >vue</div>
     <div @click="goPath('react')">react</div>
+    <router-view />
     <!-- <iframe src="https://micro-test.leadscloud.com/micro-app1" frameborder="2" width="1000px" height="500px"></iframe> -->
  </div>
 </template>
