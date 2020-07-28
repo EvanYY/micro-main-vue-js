@@ -1,10 +1,11 @@
 import { __awaiter, __generator } from 'tslib'
 var rawPublicPath = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__ || '/'
+console.log(rawPublicPath)
 export default function getAddOn (global, publicPath) {
   if (publicPath === undefined) {
     publicPath = '/'
   }
-
+  publicPath = process.env.publicPath === 'production' ? '/micro-app1/' : '/'
   var hasMountedOnce = false
   return {
     beforeLoad: function beforeLoad () {

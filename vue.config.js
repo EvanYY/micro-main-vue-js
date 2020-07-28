@@ -2,16 +2,16 @@ const path = require('path')
 const eslintSorceMap = process.env.NODE_ENV !== 'production' || process.env.NODE_ENV === 'test'
 module.exports = {
   lintOnSave: eslintSorceMap,
-  // publicPath: process.env.NODE_ENV === 'production' ? '/micro-main-vue/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/micro-main-vue/' : '/',
   configureWebpack: {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src')
       }
-    },
-    output: {
-      publicPath: process.env.NODE_ENV === 'production' ? '/micro-main-vue/' : '/'
     }
+    // output: {
+    //   publicPath: process.env.NODE_ENV === 'production' ? '/micro-main-vue/' : '/'
+    // }
   },
   chainWebpack: config => {
     config
