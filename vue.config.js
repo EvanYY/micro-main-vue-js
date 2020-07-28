@@ -2,7 +2,6 @@ const path = require('path')
 const eslintSorceMap = process.env.NODE_ENV !== 'production' || process.env.NODE_ENV === 'test'
 module.exports = {
   lintOnSave: eslintSorceMap,
-  publicPath: process.env.NODE_ENV === 'production' ? '/micro-main-vue/' : '/',
   configureWebpack: {
     resolve: {
       alias: {
@@ -14,6 +13,7 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
+        console.log(args)
         args[0].title = '询盘云系统管理'
         return args
       })
