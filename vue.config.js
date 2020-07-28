@@ -8,6 +8,9 @@ module.exports = {
       alias: {
         '@': path.resolve(__dirname, 'src')
       }
+    },
+    output: {
+      publicPath: process.env.NODE_ENV === 'production' ? '/micro-main-vue/' : '/'
     }
   },
   chainWebpack: config => {
