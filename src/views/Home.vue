@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Hello Daddy</h1>
   </div>
 </template>
 
@@ -8,8 +8,6 @@
 // @ is an alias to /src
 
 export default {
-  name: 'Home',
-  components: {
-  }
+  name: 'Home'
 }
 </script>

@@ -1,9 +1,8 @@
 <template>
  <div>
-    我是Main
-    <div @click="goPath('vue')" >vue</div>
-    <div @click="goPath('react')">react</div>
-    <router-view />
+    <div class="test">我是Main</div>
+    <div @click="goPath('app1')" >vue</div>
+    <router-view :key="(new Date()).getTime()"/>
     <!-- <iframe src="https://micro-test.leadscloud.com/micro-app1" frameborder="2" width="1000px" height="500px"></iframe> -->
  </div>
 </template>
@@ -19,6 +18,12 @@ export default {
     next(vm => {
       return true
     })
+  },
+  beforeRouteLeave (to, from, next) {
+    console.log(to)
+    console.log(from)
+    console.log(next)
+    next()
   },
   components: {},
   mixins: [],
@@ -37,8 +42,7 @@ export default {
       return false
     },
     goPath (path) {
-      debugger
-      this.$router.push({ path: `${path}` })
+      this.$router.push({ path: `/${path}` })
     }
   },
   created () {},
@@ -48,6 +52,14 @@ export default {
     // console.log(process.env.BASE_URL)
     // console.log(process.env.VUE_APP_MODE)
   },
-  beforeDestroy () {}
+  beforeDestroy () {
+    console.log('main beforeDestroy')
+  }
 }
 </script>
+<style lang="scss" scoped>
+.test {
+  color:aqua
+}
+
+</style>
