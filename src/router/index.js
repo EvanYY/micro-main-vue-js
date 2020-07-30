@@ -24,7 +24,5 @@ const router = new VueRouter({
   mode: 'history',
   routes
 })
-router.onError = (err) => {
-  throw new Error(err)
-}
+
 export default router

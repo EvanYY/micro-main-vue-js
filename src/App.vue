@@ -9,7 +9,7 @@
         <router-view v-show="$route.name" />
 
         <!-- 子应用渲染区，用于挂载子应用节点 -->
-        <section v-show="!$route.name" id="frame"></section>
+        <section v-show="!$route.name" id="mount-app-container"></section>
       </section>
     </section>
   </a-config-provider>
@@ -30,30 +30,30 @@ export default {
           path: '/'
         },
         {
-          key: 'VueMicroApp',
-          title: 'Vue 主页',
-          path: '/vue'
-        },
-        {
-          key: 'VueMicroAppList',
-          title: 'Vue 列表页',
-          path: '/vue/list'
-        },
-        {
-          key: 'ReactMicroApp',
-          title: 'React 主页',
-          path: '/react'
-        },
-        {
-          key: 'ReactMicroAppList',
-          title: 'React 列表页',
-          path: '/react/list'
-        },
-        {
-          key: 'StaticMicroApp',
-          title: 'Static 微应用',
-          path: '/static'
+          key: 'MicroAppCrm',
+          title: 'CRM test',
+          path: '/crm'
         }
+        // {
+        //   key: 'VueMicroAppList',
+        //   title: 'Vue 列表页',
+        //   path: '/vue/list'
+        // },
+        // {
+        //   key: 'ReactMicroApp',
+        //   title: 'React 主页',
+        //   path: '/react'
+        // },
+        // {
+        //   key: 'ReactMicroAppList',
+        //   title: 'React 列表页',
+        //   path: '/react/list'
+        // },
+        // {
+        //   key: 'StaticMicroApp',
+        //   title: 'Static 微应用',
+        //   path: '/static'
+        // }
       ]
     }
   }
