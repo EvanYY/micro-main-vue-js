@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Hello Daddy</h1>
+    <h1>Hello Daddy FUCK</h1>
   </div>
 </template>
 
