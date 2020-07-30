@@ -7,4 +7,5 @@ const microApps = [{ name: 'MicroAppCrm', activeRule: '/crm' }, { name: 'MicroAp
     entry: url + entrys[v.name]
   }
 })
+console.log('microApps', microApps)
 export default microApps

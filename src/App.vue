@@ -33,6 +33,11 @@ export default {
           key: 'MicroAppCrm',
           title: 'CRM test',
           path: '/crm'
+        },
+        {
+          key: 'MicroAppReport',
+          title: 'report test',
+          path: '/report'
         }
         // {
         //   key: 'VueMicroAppList',
