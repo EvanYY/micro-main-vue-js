@@ -26,7 +26,7 @@ module.exports = {
   // productionSourceMap: eslintSorceMap,
   productionSourceMap: false,
   devServer: {
-    port: 9999,
+    port: 5000,
     open: false,
     disableHostCheck: true
   }
