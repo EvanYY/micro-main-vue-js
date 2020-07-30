@@ -1,12 +1,9 @@
 export const microApp = [
   {
     name: 'MicroAppCrm',
-    entry: 'https://micro-app.leadscloud.com/micro-app1',
+    entry: 'https://micro-app.leadscloud.com/micro-app-crm',
     container: '#mount-app-container',
-    activeRule: '/crm',
-    props: {
-      say: 'i am your father'
-    }
+    activeRule: '/crm'
   }
   // {
   //   name: 'ReactMicroApp',
