@@ -1,6 +1,6 @@
 // startConfig
 export const staticStart = {
-  prefetch: false, // 预加载
+  prefetch: true, // 预加载
   singular: true, // 单例
   sandbox: true // 沙箱
   // sandbox: { strictStyleIsolation: false }

@@ -124,7 +124,8 @@ function getRender (appName, appContent, container, legacyRender) {
       })
     }
 
-    var containerElement = typeof container === 'string' ? document.querySelector(container) : container // The container might have be removed after micro app unmounted.
+    var containerElement = typeof container === 'string' ? document.querySelector(container) : container
+    // The container might have be removed after micro app unmounted.
     // Such as the micro app unmount lifecycle called by a react componentWillUnmount lifecycle, after micro app unmounted, the react component might also be removed
 
     if (phase !== 'unmounted') {

@@ -13,7 +13,6 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
-        console.log(args)
         args[0].title = '询盘云系统管理'
         return args
       })
