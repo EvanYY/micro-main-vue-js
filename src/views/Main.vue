@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import _isFunction from 'lodash/isFunction'
+import _ from 'lodash'
 export default {
   name: 'Main',
   beforeRouteEnter (to, from, next) {
@@ -47,7 +47,7 @@ export default {
   },
   created () {},
   mounted () {
-    console.log(_isFunction(this.test))
+    console.log(_.isFunction(this.test))
     // console.log(process.env.NODE_ENV)
     // console.log(process.env.BASE_URL)
     // console.log(process.env.VUE_APP_MODE)

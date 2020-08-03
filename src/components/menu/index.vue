@@ -12,7 +12,7 @@
 </template>
 
 <script>
-
+import _ from 'lodash'
 export default {
   name: 'Menus',
   props: {
@@ -26,6 +26,9 @@ export default {
     return {
       selectKey: ''
     }
+  },
+  mounted () {
+    console.log(_.isFunction(this._initMenus))
   },
   methods: {
     _initMenus () {
@@ -62,7 +65,6 @@ export default {
   created () {
     this._initMenus()
   },
-  mounted () {},
   beforeDestroy () {}
 }
 </script>

@@ -1,5 +1,4 @@
-import _isFunction from 'lodash/isFunction'
-import _snakeCase from 'lodash/snakeCase'
+import _ from 'lodash'
 export function sleep (ms) {
   return new Promise(function (resolve) {
     return setTimeout(resolve, ms)
@@ -19,7 +18,7 @@ export function getDefaultTplWrapper (id) {
   }
 }
 export function getWrapperId (id) {
-  return '__qiankun_microapp_wrapper_for_' + _snakeCase(id) + '__'
+  return '__qiankun_microapp_wrapper_for_' + _.snakeCase(id) + '__'
 }
 /** 校验子应用导出的 生命周期 对象是否正确 */
 
@@ -29,7 +28,7 @@ export function validateExportLifecycle (exports) {
   var mount = _a.mount
   var unmount = _a.unmount
 
-  return _isFunction(bootstrap) && _isFunction(mount) && _isFunction(unmount)
+  return _.isFunction(bootstrap) && _.isFunction(mount) && _.isFunction(unmount)
 }
 
 var Deferred =

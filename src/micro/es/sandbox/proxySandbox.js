@@ -1,5 +1,5 @@
 /* eslint-disable no-prototype-builtins */
-import _uniq from 'lodash/uniq'
+import _ from 'lodash'
 import { __spread } from 'tslib'
 /**
  * @author evan_yangyang
@@ -163,7 +163,7 @@ var ProxySandbox =
       },
       // trap to support iterator with sandbox
       ownKeys: function ownKeys () {
-        return _uniq(__spread(Reflect.ownKeys(rawWindow), updateValueMap.keys()))
+        return _.uniq(__spread(Reflect.ownKeys(rawWindow), updateValueMap.keys()))
       },
       deleteProperty: function deleteProperty (_, p) {
         if (updateValueMap.has(p)) {

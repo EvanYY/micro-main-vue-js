@@ -1,4 +1,4 @@
-import _isFunction from 'lodash/isFunction'
+import _ from 'lodash'
 
 /**
  * @author evan_yangyang
@@ -104,7 +104,7 @@ export function doPrefetchStrategy (apps, prefetchStrategy, importEntryOpts) {
 
   if (Array.isArray(prefetchStrategy)) {
     prefetchAfterFirstMounted(appsName2Apps(prefetchStrategy), importEntryOpts)
-  } else if (_isFunction(prefetchStrategy)) {
+  } else if (_.isFunction(prefetchStrategy)) {
     (function () {
       return __awaiter(_this, undefined, undefined, function () {
         var _a, _b, criticalAppNames, _c, minorAppsName

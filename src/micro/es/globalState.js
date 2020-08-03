@@ -1,11 +1,11 @@
-import _cloneDeep from 'lodash/cloneDeep'
+import _ from 'lodash'
 var gloabalState = {}
 var deps = {} // 触发全局监听
 
 function emitGloabl (state, prevState) {
   Object.keys(deps).forEach(function (id) {
     if (deps[id] instanceof Function) {
-      deps[id](_cloneDeep(state), _cloneDeep(prevState))
+      deps[id](_.cloneDeep(state), _.cloneDeep(prevState))
     }
   })
 }
@@ -18,9 +18,9 @@ export function initGlobalState (state) {
   if (state === gloabalState) {
     console.warn('[qiankun] state has not changed！')
   } else {
-    var prevGloabalState = _cloneDeep(gloabalState)
+    var prevGloabalState = _.cloneDeep(gloabalState)
 
-    gloabalState = _cloneDeep(state)
+    gloabalState = _.cloneDeep(state)
     emitGloabl(gloabalState, prevGloabalState)
   }
 
@@ -57,7 +57,7 @@ export function getMicroAppStateActions (id, isMaster) {
 
       deps[id] = callback
 
-      var cloneState = _cloneDeep(gloabalState)
+      var cloneState = _.cloneDeep(gloabalState)
 
       if (fireImmediately) {
         callback(cloneState, cloneState)
@@ -84,9 +84,9 @@ export function getMicroAppStateActions (id, isMaster) {
 
       var changeKeys = []
 
-      var prevGloabalState = _cloneDeep(gloabalState)
+      var prevGloabalState = _.cloneDeep(gloabalState)
 
-      gloabalState = _cloneDeep(Object.keys(state).reduce(function (_gloabalState, changeKey) {
+      gloabalState = _.cloneDeep(Object.keys(state).reduce(function (_gloabalState, changeKey) {
         var _a
 
         if (isMaster || changeKey in _gloabalState) {

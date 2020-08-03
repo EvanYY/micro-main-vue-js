@@ -1,5 +1,4 @@
-import _concat from 'lodash/concat'
-import _mergeWith from 'lodash/mergeWith'
+import _ from 'lodash'
 import _typeof from '@babel/runtime/helpers/esm/typeof'
 
 /**
@@ -263,8 +262,8 @@ export function loadApp (app, configuration, lifeCycles) {
           unmountSandbox = sandboxInstance.unmount
         }
 
-        _d = _mergeWith({}, getAddOns(global, assetPublicPath), lifeCycles, function (v1, v2) {
-          return _concat(v1 !== null && v1 !== undefined ? v1 : [], v2 !== null && v2 !== undefined ? v2 : [])
+        _d = _.mergeWith({}, getAddOns(global, assetPublicPath), lifeCycles, function (v1, v2) {
+          return _.concat(v1 !== null && v1 !== undefined ? v1 : [], v2 !== null && v2 !== undefined ? v2 : [])
         })
         _e = _d.beforeUnmount
         beforeUnmount = _e === undefined ? [] : _e

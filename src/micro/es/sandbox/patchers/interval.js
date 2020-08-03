@@ -1,4 +1,4 @@
-import _noop from 'lodash/noop'
+import _ from 'lodash'
 
 /**
  * @author evan_yangyang
@@ -36,6 +36,6 @@ export default function patch () {
     })
     window.setInterval = rawWindowInterval
     window.clearInterval = rawWindowClearInterval
-    return _noop
+    return _.noop
   }
 }

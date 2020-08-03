@@ -1,4 +1,4 @@
-import _noop from 'lodash/noop'
+import _ from 'lodash'
 
 /**
  * @author evan_yangyang
@@ -34,6 +34,6 @@ export default function patch () {
     })
     window.addEventListener = rawAddEventListener
     window.removeEventListener = rawRemoveEventListener
-    return _noop
+    return _.noop
   }
 }

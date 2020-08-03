@@ -1,15 +1,14 @@
-import _isFunction from 'lodash/isFunction'
-import _noop from 'lodash/noop'
+import _ from 'lodash'
 export default function patch () {
   // FIXME umi unmount feature request
   var rawHistoryListen = function rawHistoryListen (_) {
-    return _noop
+    return _.noop
   }
 
   var historyListeners = []
   var historyUnListens = []
 
-  if (window.g_history && _isFunction(window.g_history.listen)) {
+  if (window.g_history && _.isFunction(window.g_history.listen)) {
     rawHistoryListen = window.g_history.listen.bind(window.g_history)
 
     window.g_history.listen = function (listener) {
@@ -25,7 +24,7 @@ export default function patch () {
   }
 
   return function free () {
-    var rebuild = _noop
+    var rebuild = _.noop
     /*
      还存在余量 listener 表明未被卸载，存在两种情况
      1. 应用在 unmout 时未正确卸载 listener
@@ -47,7 +46,7 @@ export default function patch () {
       return unListen()
     }) // restore
 
-    if (window.g_history && _isFunction(window.g_history.listen)) {
+    if (window.g_history && _.isFunction(window.g_history.listen)) {
       window.g_history.listen = rawHistoryListen
     }
 

@@ -1,4 +1,4 @@
-import _isFunction from 'lodash/isFunction'
+import _ from 'lodash'
 import { __read } from 'tslib'
 /**
  * @author evan_yangyang
@@ -131,7 +131,7 @@ function getNewAppendChild () {
               // 2. addEventListener way, which toast-loader used, see https://github.com/pyrsmk/toast/blob/master/src/Toast.ts#L64
               var loadEvent = new CustomEvent('load')
 
-              if (_isFunction(element.onload)) {
+              if (_.isFunction(element.onload)) {
                 element.onload(loadEvent)
               } else {
                 element.dispatchEvent(loadEvent)
@@ -139,7 +139,7 @@ function getNewAppendChild () {
             }, function () {
               var errorEvent = new CustomEvent('error')
 
-              if (_isFunction(element.onerror)) {
+              if (_.isFunction(element.onerror)) {
                 element.onerror(errorEvent)
               } else {
                 element.dispatchEvent(errorEvent)
