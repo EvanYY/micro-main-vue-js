@@ -13,13 +13,13 @@ const qiankunResource = require('./public/dll/qiankunResource.manifest.json')
 const eslintSorceMap = process.env.NODE_ENV !== 'production' || process.env.VUE_APP_MODE === 'test'
 function getExternals () {
   return {
-    lodash: '_',
-    vue: 'Vue',
-    vuex: 'Vuex',
-    axios: 'axios',
-    redux: 'Redux',
-    'vue-router': 'VueRouter',
-    qiankun: 'qiankun'
+    // lodash: '_',
+    // vue: 'Vue',
+    // vuex: 'Vuex',
+    // axios: 'axios',
+    // redux: 'Redux',
+    // 'vue-router': 'VueRouter',
+    // qiankun: 'qiankun'
   }
 }
 module.exports = {

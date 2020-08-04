@@ -10,7 +10,7 @@ module.exports = {
   },
   mode: 'production',
   output: {
-    filename: '[name]_dLL.[chunkhash:8].js',
+    filename: '[name]_dll_[chunkhash:8].js',
     path: path.resolve(__dirname, 'public', 'dll'),
     library: '[name]_dll_[chunkhash:8]' // 暴露给外部使用
     // libraryTarget: '' // 指定如何暴露内容，缺省时就是 var
