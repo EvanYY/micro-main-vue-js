@@ -10,7 +10,7 @@
     "serve:overseas": "vue-cli-service serve --mode overseas",
     "serve:test": "vue-cli-service serve --mode newdev",
     "build": "vue-cli-service build --mode production",
-    "build:prod": "vue-cli-service build --mode production",
+    "build:prod": "rm -rf ./public/dll &&  webpack --config webpack.config.dll.js &&vue-cli-service build --mode production",
     "build:debug": "vue-cli-service build --mode debug",
     "build:gray": "vue-cli-service build --mode gray",
     "build:overseas": "vue-cli-service build --mode overseas",
