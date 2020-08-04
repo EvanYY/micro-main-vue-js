@@ -11,17 +11,17 @@ const vueResource = require('./public/dll/vueResource.manifest.json')
 const qiankunResource = require('./public/dll/qiankunResource.manifest.json')
 
 const eslintSorceMap = process.env.NODE_ENV !== 'production' || process.env.VUE_APP_MODE === 'test'
-function getExternals () {
-  return {
-    // lodash: '_',
-    // vue: 'Vue',
-    // vuex: 'Vuex',
-    // axios: 'axios',
-    // redux: 'Redux',
-    // 'vue-router': 'VueRouter',
-    // qiankun: 'qiankun'
-  }
-}
+// function getExternals () {
+//   return {
+//     lodash: '_',
+//     vue: 'Vue',
+//     vuex: 'Vuex',
+//     axios: 'axios',
+//     redux: 'Redux',
+//     'vue-router': 'VueRouter',
+//     qiankun: 'qiankun'
+//   }
+// }
 module.exports = {
   lintOnSave: eslintSorceMap,
   configureWebpack: smp.wrap({
@@ -30,7 +30,7 @@ module.exports = {
         '@': path.resolve(__dirname, 'src')
       }
     },
-    externals: getExternals(),
+    // externals: getExternals(),
     // externals: process.env.NODE_ENV === 'production' ? getExternals() : {},
     optimization: {
       splitChunks: { // 分割代码块
@@ -102,9 +102,10 @@ module.exports = {
       .plugin('html')
       .tap(args => {
         args[0].title = '询盘云系统管理'
-        args[0].utilsResource = utilsResource.name + '.js'
+        args[0].utilsResource = utilsResource.name + '.js?'
         args[0].vueResource = vueResource.name + '.js'
         args[0].qiankunResource = qiankunResource.name + '.js'
+        args[0].hash = true
         return args
       })
     if (process.env.VUE_APP_MODE === 'test') {

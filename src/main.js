@@ -4,7 +4,7 @@ import Antd from 'ant-design-vue'
 
 import router from './router'
 import store from './store'
-import startQiankun from './micro'
+import startQiankun from './micro-handler'
 import './assets/styles/locale.antd.css'
 
 Vue.use(Antd)
