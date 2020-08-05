@@ -2,6 +2,8 @@
   <div class="home">
     <h1 @click="getShared">Hello Daddy FUCK</h1>
     <h1 @click="dispatchs">dispatch</h1>
+    <h1 @click="reset">reset</h1>
+    <h1 @click="dispatchs">dispatch</h1>
   </div>
 </template>
 
@@ -22,7 +24,6 @@ export default {
   components: {
   },
   mounted () {
-    // this.store = createStore(shared)
     console.log(_.isFunction(this._initMenus))
   },
   methods: {
@@ -30,12 +31,12 @@ export default {
       console.log(store.getState())
     },
     dispatchs () {
+      store.dispatch({ type: 'COMMON_SET_VALUE', payload: { default: Math.random() }})
+      this.getShared()
+    },
+    reset () {
       const { common } = store.getState()
-      store.dispatch({ type: 'SET_STATUS', payload: !common.status })
-      store.dispatch({
-        type: 'DECREMENT',
-        text: 'Use Redux'
-      })
+      store.dispatch({ type: 'COMMON_RESET', payload: { status: !common.status }})
       this.getShared()
     }
   }

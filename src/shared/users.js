@@ -1,25 +1,32 @@
 import { isObject, cloneDeep } from 'lodash'
-
-// state stateDefault
+// state user
 const stateDefault = {
-  status: true,
-  default: 1
+  // 登录账户ID
+  userUID: null,
+  AccId: null,
+  // 用户名片
+  myInfo: {},
+  // 好友/黑名单/陌生人名片, 数据结构如：{cid: {attr: ...}, ...}
+  userInfos: {},
+  // 用户订阅的事件同步, 数据结构如：{cid: {typeid: {...}, ...}, ...}
+  userSubscribes: {},
+  default: 2
 }
 // stateDefault state 值的操作
 const Action = (state = {}, action = {}) => {
   const { type, payload } = action
   switch (type) {
-    case 'COMMON_SET_VALUE':
+    case 'USERS_SET_VALUE':
       if (isObject(payload)) {
         for (const k in payload) {
           if (state[k]) state[k] = payload[k]
         }
       }
       break
-    case 'COMMON_CLEAR':
+    case 'USERS_CLEAR':
       state = null
       break
-    case 'COMMON_RESET':
+    case 'USERS_RESET':
       state = cloneDeep(stateDefault)
       break
     default:

@@ -2,7 +2,7 @@
 export const staticStart = {
   prefetch: false, // 预加载
   singular: true, // 单例
-  sandbox: true // 沙箱
+  sandbox: false // 沙箱
   // sandbox: { strictStyleIsolation: false }
   // fetch: Function
   // getPublicPath: (url: string) => string
