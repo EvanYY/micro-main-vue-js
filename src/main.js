@@ -4,12 +4,12 @@ import Antd from 'ant-design-vue'
 
 import router from './router'
 import store from './store'
-import startQiankun from './micro-handler'
 import './assets/styles/locale.antd.css'
+import './micro-handler'
 
 Vue.use(Antd)
 Vue.config.productionTip = false
-startQiankun()
+// startQiankun(staticStart)
 
 new Vue({
   router,

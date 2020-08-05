@@ -1,6 +1,6 @@
 <template>
  <div>
-    <div class="test">我是Main</div>
+    <div class="test" @click="getShared">我是Main</div>
     <div @click="goPath('app1')" >vue</div>
     <router-view :key="(new Date()).getTime()"/>
     <!-- <iframe src="https://micro-test.leadscloud.com/micro-app1" frameborder="2" width="1000px" height="500px"></iframe> -->
@@ -9,6 +9,7 @@
 
 <script>
 import _ from 'lodash'
+import shared from '@/shared'
 export default {
   name: 'Main',
   beforeRouteEnter (to, from, next) {
@@ -43,6 +44,9 @@ export default {
     },
     goPath (path) {
       this.$router.push({ path: `/${path}` })
+    },
+    getShared () {
+      console.log(shared.getShared())
     }
   },
   created () {},

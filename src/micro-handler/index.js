@@ -1,12 +1,12 @@
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-// export const { microApp } = require(`./app-list/${process.env.NODE_ENV}/index.js`)
 import {
   registerMicroApps,
   addGlobalUncaughtErrorHandler,
   start
 } from 'qiankun'
 import apps from './app/index'
+import { staticStart } from './qiankunStaticConfig'
 /**
  * 注册子应用
  * 第一个参数 - 子应用的注册信息
@@ -42,4 +42,4 @@ addGlobalUncaughtErrorHandler((event) => {
 })
 
 // 导出 qiankun 的启动函数
-export default start
+start(staticStart)

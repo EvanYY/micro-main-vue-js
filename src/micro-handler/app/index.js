@@ -1,5 +1,7 @@
 import { apps } from './base-list'
-import props from '@/state-props'
+// import props from '@/state-props'
+import shared from '@/shared'
+
 const { entrys } = require(`./${process.env.NODE_ENV}`)
 const url = process.env.VUE_APP_MICRO_URL
 const microApps = apps.map(v => {
@@ -7,7 +9,7 @@ const microApps = apps.map(v => {
     ...v,
     container: '#mount-app-container',
     entry: url + entrys[v.name],
-    props
+    props: { context: v, shared }
   }
 })
 console.log('microApps', microApps)

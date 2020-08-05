@@ -6,7 +6,7 @@ module.exports = {
     // antDesignVue: ['ant-design-vue'],
     utilsResource: ['lodash'],
     vueResource: ['vue', 'vuex', 'vue-router', 'axios'],
-    qiankunResource: ['qiankun', 'redux']
+    qiankunResource: ['qiankun', 'redux', 'redux-actions']
   },
   mode: 'production',
   output: {
