@@ -4,6 +4,7 @@ import Antd from 'ant-design-vue'
 
 import router from './router'
 import store from './store'
+import '@/assets/styles/index.scss'
 import './assets/styles/locale.antd.css'
 import './micro-handler'
 

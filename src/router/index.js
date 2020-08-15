@@ -1,21 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
-import Home from '@/views/Home.vue'
+import { beforeEach } from './beforeEach'
+import { afterEach } from './afterEach'
+import { beforeResolve } from './beforeResolve'
+import { onError } from './onError'
+import { onReady } from './onReady'
+import { baseRoutes } from './base-routes'
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    /**
-     * path: 路径为 / 时触发该路由规则
-     * name: 路由的 name 为 Home
-     * component: 触发路由时加载 `Home` 组件
-     */
-    path: '/',
-    name: 'Home',
-    component: Home
-  }
-]
+const routes = [].concat(baseRoutes)
 /**
  * 注册路由实例
  * 即将开始监听 location 变化，触发路由规则
@@ -24,5 +17,9 @@ const router = new VueRouter({
   mode: 'history',
   routes
 })
-
+router.beforeEach(beforeEach)
+router.beforeResolve(beforeResolve)
+router.afterEach(afterEach)
+router.onReady(onReady)
+router.onError(onError)
 export default router

@@ -1,6 +1,7 @@
 {
   "name": "micro-main-vue-js",
   "version": "0.1.0",
+  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --mode development",
@@ -10,7 +11,7 @@
     "serve:overseas": "vue-cli-service serve --mode overseas",
     "serve:test": "vue-cli-service serve --mode newdev",
     "build": "vue-cli-service build --mode production",
-    "build:prod": "rm -rf ./public/dll &&  webpack --config webpack.config.dll.js &&vue-cli-service build --mode production",
+    "build:prod": "rm -rf ./public/dll &&  webpack --config webpack.config.dll.js && vue-cli-service build --mode production",
     "build:debug": "vue-cli-service build --mode debug",
     "build:gray": "vue-cli-service build --mode gray",
     "build:overseas": "vue-cli-service build --mode overseas",
@@ -25,7 +26,7 @@
     "ant-design-vue": "^1.6.4",
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
-    "import-html-entry": "^1.7.4",
+    "element-ui": "2.13.0-custom.21",
     "lodash": "^4.17.19",
     "nprogress": "^0.2.0",
     "qiankun": "^2.0.16",

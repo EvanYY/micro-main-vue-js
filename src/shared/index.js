@@ -2,7 +2,6 @@
 import { createStore, combineReducers } from 'redux'
 import common from './common'
 import users from './users'
-import { pools } from './obsever-pools'
 /**
  * @important reducer设计规则！！！！！！！
  *
@@ -12,8 +11,6 @@ import { pools } from './obsever-pools'
  * 如果传入的 state 就是 undefined，一定要返回对应 reducer 的初始 state。根据上一条规则，初始 state 禁止使用 undefined。使用 ES6 的默认参数值语法来设置初始 state 很容易，但你也可以手动检查第一个参数是否为 undefined
  */
 const store = createStore(combineReducers({ common, users }))
-store.subscribe(() => {
-  pools.obsever(store.getState())
-})
+
 export default store
 

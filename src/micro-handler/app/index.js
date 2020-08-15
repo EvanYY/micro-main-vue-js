@@ -9,7 +9,7 @@ const microApps = apps.map(v => {
     ...v,
     container: '#mount-app-container',
     entry: url + entrys[v.name],
-    props: { context: v, shared }
+    props: { context: v, shared, NODE_ENV: process.env.NODE_ENV }
   }
 })
 console.log('microApps', microApps)

@@ -1,4 +1,4 @@
-// micro load storeSpace name
+// micro load storeSpaceName
 export const entrys = {
   MicroAppCrm: 'micro-app-crm',
   MicroAppReport: 'micro-app-report'
