@@ -1,0 +1,66 @@
+export default {
+  loopManage: 'Closed-Loop Optimization',
+  googleAdvise: 'To maximize the effectiveness of smart bid strategies and provide sufficient data to machine learning algorithms to make informed bidding decisions, Google officially recommends "should receive at least 30 closed-loop data in the past 30 days.',
+  closeLoopList: 'The following is a list of closed-loop data of Leadscloud received by each Google Ads conversion. ',
+  audit: 'Review',
+  manualBack: 'Manually Return ',
+  passBack: 'Return',
+  submitAudit: 'Submit',
+  willAudit: 'Pending Review',
+
+  //  表格
+  visitorID: 'Visitor ID',
+  campaign: 'Compaign',
+  adGroup: 'Ad Group Set',
+  keyWord: 'Keyword',
+  device: 'Device',
+  matchType: 'Matchtype',
+  sumbitPerson: 'Submitter',
+  conversionTime: 'Conversion Window',
+  revenueValue: 'Conversion Value',
+  conversionStatus: 'Status',
+  gclidCreateDate: 'GCLID Create time',
+  gclidExpireDate: 'GCLID Return Deadline',
+  presentFollowup: 'Current Follow-up Status',
+  presentUpload: 'Lastest Return',
+  followup: 'Follow-up Status',
+  // 回传状态及提示
+  notConversion: 'Unreturned',
+  conversionSuccess: 'Successful',
+  conversionFail: 'Failed',
+  conversionWarning: 'Please select return data~',
+  conversionError: 'Failed to pass back',
+
+  // 当前跟进状态
+  lead: 'Leads',
+  inquiry: 'Inquiry',
+  demandConfirm: '需求确认',
+  successTest: '成交测试',
+  successClient: '成交客户',
+  submitAuditSuccess: 'Inquiry submitted to review',
+  clueSubmitAuditSuccess: 'Clue submitted to review',
+  auditSuccess: 'Submitted to review',
+  submitAuditFail: 'Submisson to review failed',
+  submitManualBack: 'Inquiry submitted to manual back',
+  clueSubmitManualBack: 'Clue submitted to manual back',
+  conversionActionFirstly: 'Operation failure，please associate the transformation operation',
+  // 操作数据
+  deleteData: 'Deleted the ',
+  updateData: 'Modified the ',
+  rowData: 'row of data',
+  updateSuccess: 'Successfully modified',
+  remarkWarning: 'Remarks cannot be empty',
+  remarkSuccess: 'Successfully remarked！',
+  valueWarning: 'Value cannot be empty',
+  deleteSuccess: 'Successfully deleted',
+  deleteError: 'Failed to delete',
+
+  // 设备及匹配方式
+  computer: 'Computers',
+  phone: 'Mobile Phones',
+  pad: 'Tablets',
+
+  exactMatch: 'Exact match',
+  phraseMatch: 'Phrase match',
+  broadMatch: 'Broad match'
+}

@@ -1,26 +1,22 @@
-import { cloneDeep } from 'lodash'
+// import { cloneDeep } from 'lodash'
 import store from '@/store'
 // state stateDefault
-const stateDefault = {}
+const stateDefault = () => ({})
 // stateDefault state 值的操作
 const Action = (state = {}, action = {}) => {
   const { type, payload } = action
   switch (type) {
     case 'TOUCH_BEHAVIOR':
-      // if (isObject(payload)) {
-      //   for (const k in payload) {
-      //     if (state[k]) state[k] = payload[k]
-      //   }
-      // }
-      store.dispatch('actionBehavior')
-      debugger
+      // console.log('TOUCH_BEHAVIOR', payload)
+      // state.direction = payload
+      store.dispatch('behaviors/actionBehavior', payload)
       break
     default:
       break
   }
   return state
 }
-const reducer = (state = cloneDeep(stateDefault), action = {}) => {
+const reducer = (state = stateDefault(), action = {}) => {
   // action 匹配 key todo ===>>>> {type, payload}
   return Action(state, action) !== undefined ? Action(state, action) : state
 }
