@@ -1,6 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
-
+/*
+ * @description: 暂时废弃
+ * @author: 杨洋
+ * @date: 2020-10-15 14:24:56
+ * @version: V1.0.0
+*/
 module.exports = {
   entry: {
     // antDesignVue: ['ant-design-vue'],

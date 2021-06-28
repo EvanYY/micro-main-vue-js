@@ -11,6 +11,45 @@ const stateDefault = () => ({
   // 询盘云全局变量
   isModeRead: true, // 模块是否已读
   ifSystem: '-1', // 是否是系统设置
+  biHttp: 'http://bi.leadscloud.com',
+  biReportMenu: {
+    watchBiReport: 'http://bi.leadscloud.com/bi?proc=0&action=viewerManager ',
+    createBiReport: 'http://bi.leadscloud.com/bi?proc=0&action=editor&browserType=chrome'
+  },
+  buttonList: [],
+
+  /*
+   * @description: 用户基础信息
+   * @author: 杨洋
+   * @date: 2020-10-13 15:15:44
+   * @version: V1.0.0
+  */
+  enterpriseId: '',
+  accId: '',
+  userId: '',
+  fullName: '',
+  userName: '',
+  /*
+   * @description:聊天相关
+   * @modifyContent:
+   * @author: 杨洋
+   * @date: 2020-10-13 15:18:05
+  */
+  personSubscribes: {},
+  isServerOnlineChecked: false,
+  /*
+  * @description:邮件相关
+  * @modifyContent:
+  * @author: 杨洋
+  * @date: 2020-10-13 15:19:21
+ */
+  currentAccountIds: [],
+  /*
+   * @description: 语言和；浏览器头部储存
+   * @modifyContent:
+   * @author: 杨洋
+   * @date: 2020-10-13 15:16:00
+  */
   switchLang: $cookie.get('LANG') || 'zh-CN', // 语言
   sourceDocumentTitle: '询盘云管理系统' // 浏览器title
 })
